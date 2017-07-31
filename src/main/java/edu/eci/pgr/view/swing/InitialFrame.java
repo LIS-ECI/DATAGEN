@@ -57,7 +57,7 @@ public class InitialFrame extends ViewPanel implements Serializable{
 			{
 				newPlanButton = new JButton();
 				add(newPlanButton, "1, 1"); //$NON-NLS-1$
-				newPlanButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/newPlan.png"))); //$NON-NLS-1$
+				newPlanButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("newPlan.png"))); //$NON-NLS-1$
 				newPlanButton.setBackground(Mediator.getInstance().BACKGROUND_COLOR);
 				newPlanButton.addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent ae){
@@ -74,7 +74,7 @@ public class InitialFrame extends ViewPanel implements Serializable{
 			{
 				loadPlanButton = new JButton();
 				add(loadPlanButton, "1, 2"); //$NON-NLS-1$
-				loadPlanButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/editRunPlan.png"))); //$NON-NLS-1$
+				loadPlanButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("editRunPlan.png"))); //$NON-NLS-1$
 				loadPlanButton.addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent ae){
 						loadPlanAction();
@@ -94,7 +94,7 @@ public class InitialFrame extends ViewPanel implements Serializable{
 			{
 				aboutUsButton = new JButton();
 				this.add(aboutUsButton, "1, 3"); //$NON-NLS-1$
-				aboutUsButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/aboutUs.png"))); //$NON-NLS-1$
+				aboutUsButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("aboutUs.png"))); //$NON-NLS-1$
 				aboutUsButton.setBackground(this.getBackground());
 				aboutUsButton.addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent evt){

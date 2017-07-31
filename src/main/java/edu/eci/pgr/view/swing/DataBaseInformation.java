@@ -343,7 +343,7 @@ public class DataBaseInformation extends ViewPanel implements Serializable {
 					savedPasswordAlert
 							.setHorizontalAlignment(SwingConstants.LEFT);
 					savedPasswordAlert.setIcon(new ImageIcon(getClass()
-							.getClassLoader().getResource("images/alert.png"))); //$NON-NLS-1$
+							.getClassLoader().getResource("alert.png"))); //$NON-NLS-1$
 					savedPasswordAlert.setFocusTraversalPolicyProvider(true);
 					savedPasswordAlert.setFont(new java.awt.Font(
 							"Verdana", 0, 10)); //$NON-NLS-1$

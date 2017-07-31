@@ -196,7 +196,7 @@ public class GraphDrawer extends ViewPanel implements Serializable{
 				itemsTitle.setText(MessageBundleManager.getString("GraphDrawer.6")); //$NON-NLS-1$
 			}
 			{
-				itemsPic = new JLabel(new ImageIcon(getClass().getClassLoader().getResource("images/description.png")));  //$NON-NLS-1$
+				itemsPic = new JLabel(new ImageIcon(ClassLoader.getSystemResource("description.png")));  //$NON-NLS-1$
 				this.add(itemsPic, "1, 3, 3, 3");  //$NON-NLS-1$
 				itemsPic.setHorizontalAlignment(SwingConstants.LEFT);
 				itemsPic.setHorizontalTextPosition(SwingConstants.LEFT);

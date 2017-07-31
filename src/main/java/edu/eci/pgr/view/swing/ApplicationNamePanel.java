@@ -35,7 +35,7 @@ public class ApplicationNamePanel extends ViewPanel{
 		initGUI();
 	}
 	private void initGUI() {
-		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("images/name.png"));
+		ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("name.png"));
 		TableLayout thisLayout = new TableLayout(new double[][] {{icon.getIconWidth(), TableLayout.FILL}, {TableLayout.FILL}});
 		thisLayout.setHGap(5);
 		thisLayout.setVGap(5);
@@ -44,7 +44,7 @@ public class ApplicationNamePanel extends ViewPanel{
 		{
 			image = new JLabel();
 			add(image, "0, 0");
-			image.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/name.png")));
+			image.setIcon(new ImageIcon(ClassLoader.getSystemResource("name.png")));
 		}
 		{
 			titlePanel = new JPanel();

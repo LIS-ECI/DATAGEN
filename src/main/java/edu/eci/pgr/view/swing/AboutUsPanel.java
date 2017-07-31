@@ -97,7 +97,9 @@ public class AboutUsPanel extends ViewPanel {
 				{
 					image = new JLabel();
 					infoPanel.add(image, "1, 0, 1, 2"); //$NON-NLS-1$
-					image.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/name.png"))); //$NON-NLS-1$
+					image.setIcon(new ImageIcon(ClassLoader.getSystemResource("name.png"))); //$NON-NLS-1$
+                                        
+                                        
 				}
 			}
 			{
@@ -111,19 +113,19 @@ public class AboutUsPanel extends ViewPanel {
 				{
 					beatrizRojas = new JLabel();
 					picturesPanel.add(beatrizRojas, "0, 0"); //$NON-NLS-1$
-					beatrizRojas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/BeatrizRojas.jpg"))); //$NON-NLS-1$
+					beatrizRojas.setIcon(new ImageIcon(ClassLoader.getSystemResource("BeatrizRojas.jpg"))); //$NON-NLS-1$
 					beatrizRojas.setHorizontalAlignment(SwingConstants.CENTER);
 				}
 				{
 					felipeVillamil = new JLabel();
 					picturesPanel.add(felipeVillamil, "0, 1"); //$NON-NLS-1$
-					felipeVillamil.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/FelipeVillamil.jpg"))); //$NON-NLS-1$
+					felipeVillamil.setIcon(new ImageIcon(ClassLoader.getSystemResource("FelipeVillamil.jpg"))); //$NON-NLS-1$
 					felipeVillamil.setHorizontalAlignment(SwingConstants.CENTER);
 				}
 				{
 					hectorCadavid = new JLabel();
 					picturesPanel.add(hectorCadavid, "0, 2"); //$NON-NLS-1$
-					hectorCadavid.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/HectorCadavid.jpg"))); //$NON-NLS-1$
+					hectorCadavid.setIcon(new ImageIcon(ClassLoader.getSystemResource("HectorCadavid.jpg"))); //$NON-NLS-1$
 					hectorCadavid.setHorizontalAlignment(SwingConstants.CENTER);
 				}
 				{

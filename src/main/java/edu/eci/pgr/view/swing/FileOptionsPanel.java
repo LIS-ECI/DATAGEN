@@ -97,7 +97,7 @@ public class FileOptionsPanel extends ViewPanel {
 			{
 				newButton = new JButton();
 				newPanel.add(newButton, "1, 0");  //$NON-NLS-1$
-				newButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/new.png")));  //$NON-NLS-1$
+				newButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("new.png")));  //$NON-NLS-1$
 				newButton.addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent arg0) {
 						Mediator.getInstance().newPlanAction();
@@ -126,7 +126,7 @@ public class FileOptionsPanel extends ViewPanel {
 			{
 				openButton = new JButton();
 				openPanel.add(openButton, "1, 0");  //$NON-NLS-1$
-				openButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/open.png")));  //$NON-NLS-1$
+				openButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("open.png")));  //$NON-NLS-1$
 				openButton.addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent act){
 						Mediator.getInstance().loadPlanAction(null);
@@ -155,7 +155,7 @@ public class FileOptionsPanel extends ViewPanel {
 			{
 				saveButton = new JButton();
 				savePanel.add(saveButton, "1, 0");  //$NON-NLS-1$
-				saveButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/save.png")));  //$NON-NLS-1$
+				saveButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("save.png")));  //$NON-NLS-1$
 				saveButton.addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent arg0) {
 						Mediator.getInstance().savePlanAction();
@@ -184,7 +184,7 @@ public class FileOptionsPanel extends ViewPanel {
 			{
 				saveAsButton = new JButton();
 				saveAsPanel.add(saveAsButton, "1, 0");  //$NON-NLS-1$
-				saveAsButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/saveAs.png")));  //$NON-NLS-1$
+				saveAsButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("saveAs.png")));  //$NON-NLS-1$
 				saveAsButton.addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent evt){
 						Mediator.getInstance().saveAsPlanAction();
@@ -213,7 +213,7 @@ public class FileOptionsPanel extends ViewPanel {
 			{
 				aboutUsButton = new JButton();
 				aboutUsPanel.add(aboutUsButton, "1, 0");  //$NON-NLS-1$
-				aboutUsButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/about.png")));  //$NON-NLS-1$
+				aboutUsButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("about.png")));  //$NON-NLS-1$
 				aboutUsButton.setBorder(null);
 				aboutUsButton.setBackground(Mediator.getInstance().BACKGROUND_COLOR);
 				aboutUsButton.setEnabled(activateButtons);
@@ -240,7 +240,7 @@ public class FileOptionsPanel extends ViewPanel {
 			{
 				colorButton = new JButton();
 				changeColorPanel.add(colorButton, "1, 0"); //$NON-NLS-1$
-				colorButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/template-icon.png"))); //$NON-NLS-1$
+				colorButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("template-icon.png"))); //$NON-NLS-1$
 				colorButton.setBorder(null);
 				colorButton.setBackground(Mediator.getInstance().BACKGROUND_COLOR);
 				colorButton.setEnabled(activateButtons);
@@ -270,7 +270,7 @@ public class FileOptionsPanel extends ViewPanel {
 			{
 				fontColorButton = new JButton();
 				fontPanel.add(fontColorButton, "1, 0"); //$NON-NLS-1$
-				fontColorButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/font.png"))); //$NON-NLS-1$
+				fontColorButton.setIcon(new ImageIcon(ClassLoader.getSystemResource("font.png"))); //$NON-NLS-1$
 				fontColorButton.setBorder(null);
 				fontColorButton.setBackground(Mediator.getInstance().BACKGROUND_COLOR);
 				fontColorButton.setEnabled(activateButtons);

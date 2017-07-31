@@ -740,7 +740,7 @@ public class Mediator extends JFrame{
 		aboutUs = new AboutUsPanel();
 		aboutUsFrame = new JFrame();
 		aboutUsFrame.getContentPane().add(aboutUs);
-		aboutUsFrame.setIconImage(new ImageIcon(this.getClass().getClassLoader().getResource("images/logo.png")).getImage()); //$NON-NLS-1$
+		aboutUsFrame.setIconImage(new ImageIcon(ClassLoader.getSystemResource("logo.png")).getImage());
 		aboutUsFrame.setTitle(MessageBundleManager.getString("AboutUsPanel.1")); //$NON-NLS-1$
 
 		namePanel = new ApplicationNamePanel();
