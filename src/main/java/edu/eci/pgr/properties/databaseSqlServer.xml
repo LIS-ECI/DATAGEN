@@ -1,0 +1,7 @@
+<linked-list>
+<string>jdbc:sqlserver://localhost:1433;databaseName=bdpgr</string>
+<string>bdpgr</string>
+<string>pg12345</string>
+<string>com.microsoft.sqlserver.jdbc.SQLServerDriver</string>
+<string>sqlserver</string>
+</linked-list>

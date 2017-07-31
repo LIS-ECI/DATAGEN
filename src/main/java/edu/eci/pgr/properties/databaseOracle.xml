@@ -1,0 +1,7 @@
+<linked-list>
+<string>jdbc:oracle:thin:@localhost:1521:ORCL</string>
+<string>BDPGR</string>
+<string>bdpgr</string>
+<string>oracle.jdbc.driver.OracleDriver</string>
+<string>oracle</string>
+</linked-list>

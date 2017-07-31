@@ -1,0 +1,7 @@
+<linked-list>
+<string>jdbc:mysql://localhost:3306/testpgr4</string>
+<string>root</string>
+<string>pass</string>
+<string>com.mysql.jdbc.Driver</string>
+<string>mysql</string>
+</linked-list>

@@ -1,0 +1,14 @@
+<dependency><groupId>local</groupId><artifactId>AnchorLayout.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/AnchorLayout.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>TableLayout.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/TableLayout.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>derby.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/derby.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>ha-jdbc-2.0.13-jdk1.6.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/ha-jdbc-2.0.13-jdk1.6.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>jgraph-2.2.1-java1.4.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/jgraph-2.2.1-java1.4.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>jgrapht-jdk1.5.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/jgrapht-jdk1.5.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>jsc.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/jsc.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>jtds-1.2.2.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/jtds-1.2.2.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>miglayout-3.5.5.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/miglayout-3.5.5.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>mysql-connector-java-5.1.6-bin.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/mysql-connector-java-5.1.6-bin.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>ojdbc14.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/ojdbc14.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>sqljdbc.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/sqljdbc.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>swing-layout-1.0.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/swing-layout-1.0.jar</systemPath></dependency>
+<dependency><groupId>local</groupId><artifactId>xstream-1.2.2.jar</artifactId><version>1.0</version><scope>system<scope>systemPath>${project.basedir}/libs/xstream-1.2.2.jar</systemPath></dependency>
