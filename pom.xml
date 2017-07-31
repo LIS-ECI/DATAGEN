@@ -10,6 +10,14 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>jboss-repo</id>
+            <name>jboss-repo</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/</url>
+        </repository>
+    </repositories>    
     
     <build>
         <resources>
@@ -48,13 +56,21 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/derby.jar</systemPath>
         </dependency>
-        <dependency>
+        
+        <!--<dependency>
             <groupId>local</groupId>
             <artifactId>ha-jdbc-2.0.13-jdk1.6.jar</artifactId>
             <version>1.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/ha-jdbc-2.0.13-jdk1.6.jar</systemPath>
-        </dependency>
+        </dependency>-->
+
+        <dependency>
+            <groupId>net.sf.ha-jdbc</groupId>
+            <artifactId>ha-jdbc</artifactId>
+            <version>3.0.0</version>
+        </dependency>        
+                        
         <dependency>
             <groupId>local</groupId>
             <artifactId>jgraph-2.2.1-java1.4.jar</artifactId>
@@ -90,13 +106,13 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/miglayout-3.5.5.jar</systemPath>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>local</groupId>
             <artifactId>mysql-connector-java-5.1.6-bin.jar</artifactId>
             <version>1.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/mysql-connector-java-5.1.6-bin.jar</systemPath>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>local</groupId>
             <artifactId>ojdbc14.jar</artifactId>
@@ -118,13 +134,13 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/swing-layout-1.0.jar</systemPath>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>local</groupId>
             <artifactId>xstream-1.2.2.jar</artifactId>
             <version>1.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/xstream-1.2.2.jar</systemPath>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -136,7 +152,16 @@
             <artifactId>table-layout</artifactId>
             <version>4.2</version>
         </dependency>
-        
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.35</version>
+        </dependency>
     </dependencies>
     
     

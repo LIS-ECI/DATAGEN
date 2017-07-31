@@ -18,10 +18,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import net.sf.hajdbc.QualifiedName;
 import net.sf.hajdbc.UniqueConstraint;
 import net.sf.hajdbc.cache.DatabaseMetaDataSupport;
-import net.sf.hajdbc.dialect.MySQLDialect;
+import net.sf.hajdbc.dialect.mysql.MySQLDialect;
 
 import com.mysql.jdbc.DatabaseMetaData;
 
@@ -37,6 +36,9 @@ import edu.eci.pgr.exceptions.MySqlRetrieverException;
 import edu.eci.pgr.i18n.MessageBundleManager;
 import edu.eci.pgr.persistence.ConnectionFactory;
 import edu.eci.pgr.persistence.InformationRetriever;
+import net.sf.hajdbc.cache.DatabaseMetaDataSupportFactoryImpl;
+import net.sf.hajdbc.cache.QualifiedNameImpl;
+import net.sf.hajdbc.cache.eager.EagerTableProperties;
 
 //=======================================================================
 //CLASS MySqlMetaDataInfo.java
@@ -239,10 +241,20 @@ public class MySqlInformationRetriever extends InformationRetriever {
 
 	protected boolean isUniqueKey(String name, String table) throws MySqlRetrieverException{
 		try {
+                    EagerTableProperties etv=new EagerTableProperties(table, dbMetaData, new MySQLDialect(), factory);
+                    
+                    EagerTableProperties(QualifiedName table, DatabaseMetaData metaData, Dialect dialect, QualifiedNameFactory factory)                     
+                    
+                    
+                    
 			boolean response = false;
-			DatabaseMetaDataSupport metaSup = new DatabaseMetaDataSupport(dbMetaData,new MySQLDialect());
+                        DatabaseMetaDataSupport metaSup = new DatabaseMetaDataSupportFactoryImpl().createSupport(dbMetaData, new MySQLDialect());
+
+                        //DatabaseMetaDataSupport metaSup = new DatabaseMetaDataSupport(dbMetaData,new MySQLDialect());
+                        
 			Iterator<UniqueConstraint> uniqueConstraints = metaSup.getUniqueConstraints(dbMetaData,
-					new QualifiedName(dbMetaData.getUserName(),table), null).iterator();
+					new QualifiedNameImpl(dbMetaData.getUserName(),table,false,false), null).iterator();
+                        
 			while(uniqueConstraints.hasNext() && !response){
 				UniqueConstraint uc = uniqueConstraints.next();
 				List<String> columns = uc.getColumnList();

@@ -21,8 +21,6 @@ import java.util.List;
 
 import net.sf.hajdbc.QualifiedName;
 import net.sf.hajdbc.UniqueConstraint;
-import net.sf.hajdbc.cache.DatabaseMetaDataSupport;
-import net.sf.hajdbc.dialect.OracleDialect;
 import edu.eci.pgr.business.ColumnVO;
 import edu.eci.pgr.business.DatabaseVO;
 import edu.eci.pgr.business.ForeignKeyVO;
