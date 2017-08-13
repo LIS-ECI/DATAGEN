@@ -19,7 +19,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import net.sf.hajdbc.UniqueConstraint;
-import net.sf.hajdbc.cache.DatabaseMetaDataSupport;
 import net.sf.hajdbc.dialect.mysql.MySQLDialect;
 
 import com.mysql.jdbc.DatabaseMetaData;
@@ -33,12 +32,18 @@ import edu.eci.pgr.business.TypeVO;
 import edu.eci.pgr.business.types.MySqlTypeVO;
 import edu.eci.pgr.exceptions.ConnectionException;
 import edu.eci.pgr.exceptions.MySqlRetrieverException;
+import edu.eci.pgr.exceptions.RetrieverException;
 import edu.eci.pgr.i18n.MessageBundleManager;
 import edu.eci.pgr.persistence.ConnectionFactory;
 import edu.eci.pgr.persistence.InformationRetriever;
-import net.sf.hajdbc.cache.DatabaseMetaDataSupportFactoryImpl;
-import net.sf.hajdbc.cache.QualifiedNameImpl;
+import java.util.Collection;
+import net.sf.hajdbc.DatabaseProperties;
+import net.sf.hajdbc.TableProperties;
 import net.sf.hajdbc.cache.eager.EagerTableProperties;
+import net.sf.hajdbc.cache.lazy.LazyDatabaseProperties;
+import net.sf.hajdbc.cache.simple.SimpleDatabaseMetaDataProvider;
+import net.sf.hajdbc.dialect.Dialect;
+import net.sf.hajdbc.dialect.oracle.OracleDialect;
 
 //=======================================================================
 //CLASS MySqlMetaDataInfo.java
@@ -69,8 +74,8 @@ public class MySqlInformationRetriever extends InformationRetriever {
 	//-----------------------------------------------------------------------
 	// INSTANCE ATTRIBUTES
 	//-----------------------------------------------------------------------
-
-	private DatabaseMetaData dbMetaData;
+        
+        private Dialect dialect=new MySQLDialect();
 	//-----------------------------------------------------------------------
 	// CONSTRUCTOR METHODS
 	//-----------------------------------------------------------------------
@@ -88,7 +93,7 @@ public class MySqlInformationRetriever extends InformationRetriever {
 	 * @param database
 	 * @throws MySqlRetrieverException 
 	 */
-	public MySqlInformationRetriever(DatabaseVO database) throws ConnectionException, MySqlRetrieverException{
+	public MySqlInformationRetriever(DatabaseVO database) throws ConnectionException, RetrieverException{
 		this.database=database;
 		try {
 			dbMetaData=(DatabaseMetaData) ConnectionFactory.getInstance().getConnection(database.getInfo()).getMetaData();
@@ -127,7 +132,7 @@ public class MySqlInformationRetriever extends InformationRetriever {
 	 * @return the set of columns of the table
 	 * @throws MySqlRetrieverException 
 	 */
-	public List<ColumnVO> getColumns(String table) throws MySqlRetrieverException {
+	public List<ColumnVO> getColumns(String table) throws RetrieverException {
 		List<ColumnVO> columns=new ArrayList<ColumnVO>();
 		try {
 			//dbMetaData= (DatabaseMetaData) conn.getMetaData();
@@ -239,34 +244,11 @@ public class MySqlInformationRetriever extends InformationRetriever {
 		}
 	}
 
-	protected boolean isUniqueKey(String name, String table) throws MySqlRetrieverException{
-		try {
-                    EagerTableProperties etv=new EagerTableProperties(table, dbMetaData, new MySQLDialect(), factory);
-                    
-                    EagerTableProperties(QualifiedName table, DatabaseMetaData metaData, Dialect dialect, QualifiedNameFactory factory)                     
-                    
-                    
-                    
-			boolean response = false;
-                        DatabaseMetaDataSupport metaSup = new DatabaseMetaDataSupportFactoryImpl().createSupport(dbMetaData, new MySQLDialect());
+        @Override
+        public Dialect getDialect() {
+            return dialect;
+        }
 
-                        //DatabaseMetaDataSupport metaSup = new DatabaseMetaDataSupport(dbMetaData,new MySQLDialect());
-                        
-			Iterator<UniqueConstraint> uniqueConstraints = metaSup.getUniqueConstraints(dbMetaData,
-					new QualifiedNameImpl(dbMetaData.getUserName(),table,false,false), null).iterator();
-                        
-			while(uniqueConstraints.hasNext() && !response){
-				UniqueConstraint uc = uniqueConstraints.next();
-				List<String> columns = uc.getColumnList();
-				for(int i=0;i<columns.size() && !response;i++)
-					if(columns.get(i).equals(name))
-						response = true;
-			}
-			return response;
-		} catch (SQLException e) {
-			throw new MySqlRetrieverException(UNIQUE_1+name+UNIQUE_2+table+UNIQUE_3,e);
-		}
-	}
 
 	@Override
 	protected boolean isAutoincrement(String name, String table) 
