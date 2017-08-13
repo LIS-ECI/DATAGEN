@@ -178,7 +178,8 @@ public class TablesRowInformation extends ViewPanel implements Serializable {
 									.getValueAt(row, 0));
 			long max = Long.parseLong(maximumVals[0]);
 			if (!ValidationUtilities.isNumeric(value)) {
-				JOptionPane.showMessageDialog(null, "El volúmen de datos debe ser numérico"); //$NON-NLS-1$
+				//TODO externalize message
+                                JOptionPane.showMessageDialog(null, "El volumen de datos debe ser numÃ©rico"); //$NON-NLS-1$
 				((TableListModel) e.getSource()).setValueAt("" + 0, row, 1); //$NON-NLS-1$
 			} else {
 				if (Long.parseLong(value) > max) {

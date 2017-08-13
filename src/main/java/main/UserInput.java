@@ -2,7 +2,7 @@ package main;
 //=======================================================================
 //ESCUELA COLOMBIANA DE INGENIERIA
 //Archivo: Entrada.java
-//Fecha Creacíon: 
+//Fecha Creacion: 
 //=======================================================================
 
 
