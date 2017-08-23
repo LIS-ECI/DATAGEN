@@ -7,3 +7,5 @@ This tool automatically generates, in a single step, syntethic data for relation
 Reference paper: https://www.academia.edu/28916545/Generador_de_datos_sint%C3%A9ticos_DATAGEN
 
 For more information: hector.cadavid@escuelaing.edu.co
+
+Project status: Code refactoring: upgrading tech stack.
