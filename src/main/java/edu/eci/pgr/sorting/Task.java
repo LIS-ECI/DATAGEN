@@ -41,13 +41,13 @@ public class Task implements Serializable {
 		initializeTypes(table);
 	}
 	
-	public Task(TableVO table, List<Task> dependencies) {
+	/*public Task(TableVO table, List<Task> dependencies) {
 		super();
-		this.table = table;
+                this.table = table;
 		this.dependencies = dependencies;
 		isAutoReferenced = false;
 		initializeTypes(table);
-	}
+	}*/
 	
 	private  void initializeTypes(TableVO table){
 		types=new Hashtable<String,TypeVO>();

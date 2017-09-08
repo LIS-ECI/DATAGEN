@@ -120,7 +120,7 @@ public abstract class InformationRetriever {
             boolean response = false;
             Dialect dialect = getDialect();
             DatabaseProperties databaseProperties = new LazyDatabaseProperties(new SimpleDatabaseMetaDataProvider(dbMetaData), dialect);
-            TableProperties tablepr = databaseProperties.findTable(name);
+            TableProperties tablepr = databaseProperties.findTable(table);
             Iterator<UniqueConstraint> uniqueConstraints = tablepr.getUniqueConstraints().iterator();
             while (uniqueConstraints.hasNext() && !response) {
                 UniqueConstraint uc = uniqueConstraints.next();

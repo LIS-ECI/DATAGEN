@@ -194,6 +194,7 @@ public class Mediator extends JFrame{
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(this,e.getMessage());
 		} catch(Exception e){
+                        e.printStackTrace();
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}
 	}

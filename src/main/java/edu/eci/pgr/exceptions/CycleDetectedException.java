@@ -3,8 +3,6 @@ package edu.eci.pgr.exceptions;
 import edu.eci.pgr.components.SortJgraphComponent;
 import edu.eci.pgr.sorting.SortingTool;
 import edu.eci.pgr.sorting.jgrapht.JGraphTSortingTool;
-import edu.eci.pgr.tests.sorting.TestSorting;
-import edu.eci.pgr.tests.sorting.cycle.CycleTest;
 
 
 /**

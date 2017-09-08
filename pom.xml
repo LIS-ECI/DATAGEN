@@ -22,6 +22,14 @@
     <build>
         <resources>
             <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.png</include>
+                    <include>**/*.jpg</include>
+                </includes>
+            </resource>
+
+            <resource>
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.properties</include>
@@ -68,7 +76,7 @@
         <dependency>
             <groupId>net.sf.ha-jdbc</groupId>
             <artifactId>ha-jdbc</artifactId>
-            <version>3.0.0</version>
+            <version>3.0.3</version>
         </dependency>        
                         
         <dependency>

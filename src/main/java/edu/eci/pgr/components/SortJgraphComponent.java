@@ -25,9 +25,13 @@ public class SortJgraphComponent  {
 		List<Task> tasks = null;
 		for(int i=0;i<tableList.size();i++){
 			Task task1 = new Task(tableList.get(i));
+                        
+
+                        
 			List<ColumnVO> columns = new ArrayList<ColumnVO>(tableList.get(i).getColumns().values());
 			for(int j=0;j<columns.size();j++){
 				if(columns.get(j) instanceof ForeignKeyVO){
+                                                                        
 					Task newTask = new Task(((ForeignKeyVO)columns.get(j)).getOriginalTable());
 					newTask.setIsPrimaryDependency(((ForeignKeyVO)columns.get(j)).isPrimaryKey());
 					task1.addDependency(newTask);
