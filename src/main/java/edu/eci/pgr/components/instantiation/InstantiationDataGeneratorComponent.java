@@ -118,17 +118,17 @@ public class InstantiationDataGeneratorComponent {
             obj=classConstructor.newInstance(new Object[]{});
             return obj;
         } catch (ClassNotFoundException e) {
-            throw new InstantException(e.getMessage()); 
+            throw new InstantException(e.getMessage(),e); 
         } catch (NoSuchMethodException e) {
-            throw new InstantException(e.getMessage()); 
+            throw new InstantException(e.getMessage(),e); 
         } catch (InvocationTargetException e) {
-            throw new InstantException(e.getMessage()); 
+            throw new InstantException(e.getMessage(),e); 
         } catch (IllegalAccessException e) {
-            throw new InstantException(e.getMessage()); 
+            throw new InstantException(e.getMessage(),e); 
         } catch (InstantiationException e) {
-            throw new InstantException(e.getMessage()); 
+            throw new InstantException(e.getMessage(),e); 
         } catch (ClassCastException e){
-            throw new InstantException(e.getMessage()); 
+            throw new InstantException(e.getMessage(),e); 
         }
 	
 	}

@@ -21,6 +21,15 @@
     
     <build>
         <resources>
+
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
@@ -86,13 +95,15 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/jgraph-2.2.1-java1.4.jar</systemPath>
         </dependency>
-        <dependency>
+        
+        <!--<dependency>
             <groupId>local</groupId>
             <artifactId>jgrapht-jdk1.5.jar</artifactId>
             <version>1.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/jgrapht-jdk1.5.jar</systemPath>
-        </dependency>
+        </dependency>-->
+        
         <dependency>
             <groupId>local</groupId>
             <artifactId>jsc.jar</artifactId>
@@ -169,6 +180,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.35</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jgrapht</groupId>
+            <artifactId>jgrapht-core</artifactId>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
     
